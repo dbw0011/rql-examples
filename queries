@@ -9,7 +9,7 @@ FROM item_occurrence
 GROUP BY 1, 2
 ORDER BY 3 DESC
 
-# List active date ranges for each deploy.
+# List active date ranges for each version.
 SELECT code_version, min(timestamp), max(timestamp)
 FROM item_occurrence
 GROUP BY 1
